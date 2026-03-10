@@ -17,23 +17,38 @@ if ! [[ "$PATH" =~ "$HOME/.local/bin:$HOME/bin:" ]]; then
 fi
 export PATH
 
-# eval "$(oh-my-posh init zsh --config 'https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/tokyonight_storm.omp.json')"
+# Aliases
+alias cc="claude"
+alias ccc="claude chat"
+alias cct="claude task"
+alias ccr="claude review"
+alias ccpr="claude --from-pr"
+
+# Oh-My-Posh configuration
 eval "$(oh-my-posh init zsh --config '~/.ohmyposh.omp.json')"
+
+# Cargo configuration
 . "$HOME/.cargo/env"
+
+# nvm configuration
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# dotnet configuration
 export ASPNETCORE_Kestrel__Certificates__Default__Password="notasecret"
 export ASPNETCORE_Kestrel__Certificates__Default__Path="/home/nick/.certs/localhost.pfx"
 
-# bun completions
+# bun configuration
+## bun completions
 [ -s "/home/nick/.bun/_bun" ] && source "/home/nick/.bun/_bun"
 
-# bun
+##  bun
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# Added by LM Studio CLI tool (lms)
+# LM Studio configuration
+## Added by LM Studio CLI tool (lms)
 export PATH="$PATH:/home/nick/.lmstudio/bin"
 
 # opencode

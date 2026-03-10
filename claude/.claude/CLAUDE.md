@@ -21,3 +21,14 @@ markdown format to add the TODO. For instance:
 
 - At the end of each plan, give me a list of unresolved questions to answer, 
 if any. Make the questions extremely concise. Sacrifice grammar for concision.
+
+## Session Permission Tracking
+
+During this session, keep a running list of every Bash command you requested 
+permission for and I approved. At the end of the session (or when I ask), 
+summarise them as ready-to-paste `settings.json` allow rule snippets, e.g.:
+
+"Bash(dotnet build *)"
+"Bash(git commit *)"
+
+so I can review and add them to .claude/settings.json in one go.
